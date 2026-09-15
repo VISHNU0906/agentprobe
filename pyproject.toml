@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentprobe"
+version = "1.0.0"
+description = "Black-box security probes for deployed LLM agents and tool servers."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Vishnu Kosuri" }]
+keywords = ["llm", "security", "prompt-injection", "mcp", "agents"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/VISHNU0906/agentprobe"
+
+[project.scripts]
+agentprobe = "agentprobe.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["agentprobe*"]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "tests"]
+testpaths = ["tests"]
