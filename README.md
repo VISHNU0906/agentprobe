@@ -7,7 +7,7 @@ evidence-based probes, and it writes a findings report. The project ships with a
 deliberately vulnerable mock agent and a hardened one, plus a vulnerable and a
 hardened mock MCP server, so every probe is tested end to end offline.
 
-## Safety and scope note (read first)
+## Operating scope
 
 Use agentprobe only against systems you own or have written authorisation to
 test. Probing an agent sends it crafted messages and, where the agent is weak,
@@ -138,7 +138,7 @@ The tests and the real run recorded here were run on Windows 11 with Python
 environment they have been exercised in so far. On systems where the `python`
 command is absent, use `python3` or the interpreter path in the `--mcp` command.
 
-## Research context in plain words
+## Research context
 
 Deployed agents fail in ways that are simple to describe and easy to miss in a
 demo. Four patterns show up again and again.
